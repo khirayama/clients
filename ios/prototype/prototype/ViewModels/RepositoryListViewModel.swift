@@ -43,5 +43,21 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
         self.apiService = apiService
         self.trackerService = trackerService
         self.experimentService = experimentService
+        
+        bindInputs()
+        bindOutputs()
     }
+    
+    private func bindInputs() {
+        let request = SearchRepositoryRequest()
+        let responsePublisher = onAppearSubject
+            .flatMap({ [apiService] _ in
+                apiService.response(from: request)
+                    .catch({ [weak self] error -> Empty<SearchRepositoryResponse, Never> in self?.errorSubject.send(error)
+                        return .init()
+                    })
+            })
+    }
+    
+    private func bindOutputs() {}
 }
