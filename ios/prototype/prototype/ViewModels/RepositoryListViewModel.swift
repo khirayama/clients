@@ -15,7 +15,7 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
     enum Input {
         case onAppear
     }
-
+    
     func apply(_ input: Input) {
         switch input {
         case .onAppear: onAppearSubject.send(())
@@ -32,4 +32,16 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
     private let responseSubject = PassthroughSubject<SearchRepositoryResponse, Never>()
     private let errorSubject = PassthroughSubject<APIServiceError, Never>()
     private let trackingSubject = PassthroughSubject<TrackEventType, Never>()
+    
+    private let apiService: APIServiceType
+    private let trackerService: TrackerType
+    private let experimentService: ExperimentServiceType
+    
+    init(apiService: APIServiceType = APIService(),
+         trackerService: TrackerType = TrackerService(),
+         experimentService: ExperimentServiceType = ExperimentService()) {
+        self.apiService = apiService
+        self.trackerService = trackerService
+        self.experimentService = experimentService
+    }
 }
