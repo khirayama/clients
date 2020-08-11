@@ -44,3 +44,7 @@
     - $つきと$なしの違い
     - ViewController、rootViewControllerはなにもの
     - ファイル消した時のremove referenceは何やってる
+    - 末尾の!
+    - finalの意味
+    - class Hoge: Decodableとかは
+    - .はじめりの変数は
