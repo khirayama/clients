@@ -25,6 +25,8 @@
 		9FC70B3524E2CD58006EAF0B /* SearchRepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B3424E2CD58006EAF0B /* SearchRepositoryResponse.swift */; };
 		9FC70B3724E2CDDE006EAF0B /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B3624E2CDDE006EAF0B /* APIServiceError.swift */; };
 		9FC70B3924E2CE2C006EAF0B /* TrackerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B3824E2CE2C006EAF0B /* TrackerService.swift */; };
+		9FC70B3B24E2CF88006EAF0B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B3A24E2CF88006EAF0B /* APIService.swift */; };
+		9FC70B3D24E2D203006EAF0B /* ExperimentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B3C24E2D203006EAF0B /* ExperimentService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		9FC70B3424E2CD58006EAF0B /* SearchRepositoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryResponse.swift; sourceTree = "<group>"; };
 		9FC70B3624E2CDDE006EAF0B /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
 		9FC70B3824E2CE2C006EAF0B /* TrackerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerService.swift; sourceTree = "<group>"; };
+		9FC70B3A24E2CF88006EAF0B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9FC70B3C24E2D203006EAF0B /* ExperimentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,8 @@
 			children = (
 				9FC70B3624E2CDDE006EAF0B /* APIServiceError.swift */,
 				9FC70B3824E2CE2C006EAF0B /* TrackerService.swift */,
+				9FC70B3A24E2CF88006EAF0B /* APIService.swift */,
+				9FC70B3C24E2D203006EAF0B /* ExperimentService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -337,6 +343,8 @@
 				9FC70B2724E17D0F006EAF0B /* UnidirectionalDataFlowType.swift in Sources */,
 				9FC70B2E24E180E4006EAF0B /* User.swift in Sources */,
 				9FC70AEE24E179EB006EAF0B /* AppDelegate.swift in Sources */,
+				9FC70B3B24E2CF88006EAF0B /* APIService.swift in Sources */,
+				9FC70B3D24E2D203006EAF0B /* ExperimentService.swift in Sources */,
 				9FC70B3024E23B0F006EAF0B /* RepositoryDetailView.swift in Sources */,
 				9FC70B2924E18034006EAF0B /* RepositoryListRow.swift in Sources */,
 				9FC70AF024E179EB006EAF0B /* SceneDelegate.swift in Sources */,
