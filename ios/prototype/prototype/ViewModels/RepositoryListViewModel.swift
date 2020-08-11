@@ -28,4 +28,8 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
     @Published var isErrorShown = false
     @Published var errorMessage = ""
     @Published private(set) var shouldShowIcon = false
+    
+    private let responseSubject = PassthroughSubject<SearchRepositoryResponse, Never>()
+    private let errorSubject = PassthroughSubject<APIServiceError, Never>()
+    private let trackingSubject = PassthroughSubject<TrackEventType, Never>()
 }
