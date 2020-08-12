@@ -16,7 +16,6 @@
 		9FC70B1024E179ED006EAF0B /* prototypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B0F24E179ED006EAF0B /* prototypeUITests.swift */; };
 		9FC70B2324E17BF6006EAF0B /* RepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B2224E17BF6006EAF0B /* RepositoryListView.swift */; };
 		9FC70B2524E17C7B006EAF0B /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B2424E17C7B006EAF0B /* RepositoryListViewModel.swift */; };
-		9FC70B2724E17D0F006EAF0B /* UnidirectionalDataFlowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B2624E17D0F006EAF0B /* UnidirectionalDataFlowType.swift */; };
 		9FC70B2924E18034006EAF0B /* RepositoryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B2824E18034006EAF0B /* RepositoryListRow.swift */; };
 		9FC70B2C24E180AD006EAF0B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B2B24E180AD006EAF0B /* Repository.swift */; };
 		9FC70B2E24E180E4006EAF0B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B2D24E180E4006EAF0B /* User.swift */; };
@@ -61,7 +60,6 @@
 		9FC70B1124E179ED006EAF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FC70B2224E17BF6006EAF0B /* RepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListView.swift; sourceTree = "<group>"; };
 		9FC70B2424E17C7B006EAF0B /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
-		9FC70B2624E17D0F006EAF0B /* UnidirectionalDataFlowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnidirectionalDataFlowType.swift; sourceTree = "<group>"; };
 		9FC70B2824E18034006EAF0B /* RepositoryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListRow.swift; sourceTree = "<group>"; };
 		9FC70B2B24E180AD006EAF0B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		9FC70B2D24E180E4006EAF0B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 			children = (
 				9FC70B2424E17C7B006EAF0B /* RepositoryListViewModel.swift */,
 				9FC70B3124E23B68006EAF0B /* RepositoryDetailViewModel.swift */,
-				9FC70B2624E17D0F006EAF0B /* UnidirectionalDataFlowType.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -336,7 +333,6 @@
 				9FC70B3724E2CDDE006EAF0B /* APIServiceError.swift in Sources */,
 				9FC70B2524E17C7B006EAF0B /* RepositoryListViewModel.swift in Sources */,
 				9FC70B2324E17BF6006EAF0B /* RepositoryListView.swift in Sources */,
-				9FC70B2724E17D0F006EAF0B /* UnidirectionalDataFlowType.swift in Sources */,
 				9FC70B2E24E180E4006EAF0B /* User.swift in Sources */,
 				9FC70B3F24E2D7E1006EAF0B /* SearchRepositoryRequest.swift in Sources */,
 				9FC70AEE24E179EB006EAF0B /* AppDelegate.swift in Sources */,

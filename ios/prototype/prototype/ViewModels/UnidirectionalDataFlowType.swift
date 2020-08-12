@@ -5,7 +5,7 @@
 
 import Foundation
 
-protocol UnidirectionalDataFlowType {
+protocol UnidirectionalDataFlowTypea {
     associatedtype InputType
     
     func apply(_ input: InputType)

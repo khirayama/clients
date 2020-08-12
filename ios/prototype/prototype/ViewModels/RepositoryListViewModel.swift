@@ -7,7 +7,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowType {
+final class RepositoryListViewModel: ObservableObject {
     typealias InputType = Input
     
     private var cancellables: [AnyCancellable] = []
@@ -35,7 +35,7 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
     
     init(apiService: APIServiceType = APIService()) {
         self.apiService = apiService
-
+        
         bindInputs()
         bindOutputs()
     }
@@ -59,7 +59,7 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
     
     private func bindOutputs() {
         let repositoriesStream = responseSubject
-            .map({$0.items})
+            .map({ $0.items })
             .assign(to: \.repositories, on: self)
         
         let errorMessageStream = errorSubject
