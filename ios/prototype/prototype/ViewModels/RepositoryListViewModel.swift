@@ -57,7 +57,54 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
                         return .init()
                     })
             })
+        
+        let responseStream = responsePublisher
+            .share()
+            .subscribe(responseSubject)
+        
+        let trackingSubjectStream = trackingSubject
+            .sink(receiveValue: trackerService.log)
+        
+        let trackingStream = onAppearSubject
+            .map({.listView})
+            .subscribe(trackingSubject)
+        
+        cancellables += [
+            responseStream,
+            trackingSubjectStream,
+            trackingStream,
+        ]
     }
     
-    private func bindOutputs() {}
+    private func bindOutputs() {
+        let repositoriesStream = responseSubject
+            .map({$0.items})
+            .assign(to: \.repositories, on: self)
+        
+        let errorMessageStream = errorSubject
+            .map({error -> String in
+                switch error {
+                case .responseError: return "network error"
+                case .parseError: return "parse error"
+                }
+            })
+            .assign(to: \.errorMessage, on: self)
+        
+        let errorStream = errorSubject
+            .map({_ in true})
+            .assign(to: \.isErrorShown, on: self)
+        
+        let showIconStream = onAppearSubject
+            .map({ [experimentService] _ in
+                experimentService.experiment(for: .showIcon)
+            })
+            .assign(to: \.shouldShowIcon, on: self)
+        
+        cancellables += [
+            repositoriesStream,
+            errorStream,
+            errorMessageStream,
+            showIconStream,
+        ]
+    }
 }

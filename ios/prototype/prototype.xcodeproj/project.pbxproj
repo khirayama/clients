@@ -27,6 +27,7 @@
 		9FC70B3924E2CE2C006EAF0B /* TrackerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B3824E2CE2C006EAF0B /* TrackerService.swift */; };
 		9FC70B3B24E2CF88006EAF0B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B3A24E2CF88006EAF0B /* APIService.swift */; };
 		9FC70B3D24E2D203006EAF0B /* ExperimentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B3C24E2D203006EAF0B /* ExperimentService.swift */; };
+		9FC70B3F24E2D7E1006EAF0B /* SearchRepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B3E24E2D7E1006EAF0B /* SearchRepositoryRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		9FC70B3824E2CE2C006EAF0B /* TrackerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerService.swift; sourceTree = "<group>"; };
 		9FC70B3A24E2CF88006EAF0B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		9FC70B3C24E2D203006EAF0B /* ExperimentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentService.swift; sourceTree = "<group>"; };
+		9FC70B3E24E2D7E1006EAF0B /* SearchRepositoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				9FC70B2424E17C7B006EAF0B /* RepositoryListViewModel.swift */,
-				9FC70B2624E17D0F006EAF0B /* UnidirectionalDataFlowType.swift */,
 				9FC70B3124E23B68006EAF0B /* RepositoryDetailViewModel.swift */,
+				9FC70B2624E17D0F006EAF0B /* UnidirectionalDataFlowType.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -186,9 +188,9 @@
 		9FC70B2A24E1809E006EAF0B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9FC70B3424E2CD58006EAF0B /* SearchRepositoryResponse.swift */,
 				9FC70B2B24E180AD006EAF0B /* Repository.swift */,
 				9FC70B2D24E180E4006EAF0B /* User.swift */,
-				9FC70B3424E2CD58006EAF0B /* SearchRepositoryResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,9 +198,10 @@
 		9FC70B3324E2CCC4006EAF0B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9FC70B3A24E2CF88006EAF0B /* APIService.swift */,
 				9FC70B3624E2CDDE006EAF0B /* APIServiceError.swift */,
 				9FC70B3824E2CE2C006EAF0B /* TrackerService.swift */,
-				9FC70B3A24E2CF88006EAF0B /* APIService.swift */,
+				9FC70B3E24E2D7E1006EAF0B /* SearchRepositoryRequest.swift */,
 				9FC70B3C24E2D203006EAF0B /* ExperimentService.swift */,
 			);
 			path = Services;
@@ -342,6 +345,7 @@
 				9FC70B3924E2CE2C006EAF0B /* TrackerService.swift in Sources */,
 				9FC70B2724E17D0F006EAF0B /* UnidirectionalDataFlowType.swift in Sources */,
 				9FC70B2E24E180E4006EAF0B /* User.swift in Sources */,
+				9FC70B3F24E2D7E1006EAF0B /* SearchRepositoryRequest.swift in Sources */,
 				9FC70AEE24E179EB006EAF0B /* AppDelegate.swift in Sources */,
 				9FC70B3B24E2CF88006EAF0B /* APIService.swift in Sources */,
 				9FC70B3D24E2D203006EAF0B /* ExperimentService.swift in Sources */,
