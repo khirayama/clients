@@ -27,7 +27,6 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
     @Published private(set) var repositories: [Repository] = []
     @Published var isErrorShown = false
     @Published var errorMessage = ""
-    @Published private(set) var shouldShowIcon = false
     
     private let responseSubject = PassthroughSubject<SearchRepositoryResponse, Never>()
     private let errorSubject = PassthroughSubject<APIServiceError, Never>()
