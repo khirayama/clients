@@ -10,8 +10,8 @@ struct ArticleIndexView: View {
     
     var body: some View {
         return NavigationView {
-            List(viewModel.articles) { article in
-                ArticleListRow(article: article)
+            return List(viewModel.articles) { article in
+                return ArticleListRow(article: article)
             }
         }
     }

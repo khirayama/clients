@@ -9,6 +9,6 @@ struct ArticleListRow: View {
     @State var article: Article
     
     var body: some View {
-        Text("ArticleListRow")
+        return Text("ArticleListRow")
     }
 }
