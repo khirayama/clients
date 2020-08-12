@@ -21,7 +21,7 @@ protocol APIServiceType {
 final class APIService: APIServiceType {
     private let baseURL: URL
     
-    init(baseURL: URL = URL(string: "https://conduit.productionready.io/api")!) {
+    init(baseURL: URL = URL(string: "https://conduit.productionready.io/")!) {
         self.baseURL = baseURL
     }
     
@@ -36,6 +36,7 @@ final class APIService: APIServiceType {
             
             let decorder = JSONDecoder()
             decorder.keyDecodingStrategy = .convertFromSnakeCase
+            debugPrint(request)
             
             return URLSession.shared.dataTaskPublisher(for: request)
                 .map({ data, urlResponse in data })

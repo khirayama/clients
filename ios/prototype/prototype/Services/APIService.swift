@@ -27,7 +27,6 @@ final class APIService: APIServiceType {
     
     func response<Request>(from request: Request) -> AnyPublisher<Request.Response, APIServiceError>
         where Request: APIRequestType {
-            
             let pathURL = URL(string: request.path, relativeTo: baseURL)!
             
             var urlComponents = URLComponents(url: pathURL, resolvingAgainstBaseURL: true)!
@@ -39,7 +38,10 @@ final class APIService: APIServiceType {
             decorder.keyDecodingStrategy = .convertFromSnakeCase
             
             return URLSession.shared.dataTaskPublisher(for: request)
-                .map({data, urlResponse in data})
+                .map({data, urlResponse in
+                    debugPrint(data)
+                    return data
+                })
                 .mapError({_ in APIServiceError.responseError})
                 .decode(type: Request.Response.self, decoder: decorder)
                 .mapError(APIServiceError.parseError)

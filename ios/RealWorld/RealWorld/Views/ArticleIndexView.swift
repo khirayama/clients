@@ -14,5 +14,6 @@ struct ArticleIndexView: View {
                 return ArticleListRow(article: article)
             }
         }
+        .onAppear(perform: { self.viewModel.apply(.onAppear) })
     }
 }
