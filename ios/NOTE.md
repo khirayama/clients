@@ -47,4 +47,6 @@
     - 末尾の!
     - finalの意味
     - class Hoge: Decodableとかは
-    - .はじめりの変数は
+    - .はじまりの変数は
+    - \.はじまり
+    - protocol
