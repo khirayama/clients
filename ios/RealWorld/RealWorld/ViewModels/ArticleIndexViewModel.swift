@@ -14,5 +14,11 @@ final class ArticleIndexViewModel: ObservableObject {
 
     init(apiService: APIService = APIService()) {
         self.apiService = apiService
+        
+        bindInputs()
+    }
+    
+    func bindInputs() {
+        let request = IndexArticleRequest()
     }
 }

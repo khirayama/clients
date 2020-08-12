@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9FC70B4D24E406B1006EAF0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B4C24E406B1006EAF0B /* AppDelegate.swift */; };
 		9FC70B4F24E406B1006EAF0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B4E24E406B1006EAF0B /* SceneDelegate.swift */; };
-		9FC70B5124E406B1006EAF0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B5024E406B1006EAF0B /* ContentView.swift */; };
 		9FC70B5324E406B4006EAF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC70B5224E406B4006EAF0B /* Assets.xcassets */; };
 		9FC70B5624E406B4006EAF0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC70B5524E406B4006EAF0B /* Preview Assets.xcassets */; };
 		9FC70B5924E406B4006EAF0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC70B5724E406B4006EAF0B /* LaunchScreen.storyboard */; };
@@ -22,6 +21,8 @@
 		9FC70B8824E412F9006EAF0B /* ArticleListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B8724E412F9006EAF0B /* ArticleListRow.swift */; };
 		9FC70B8B24E41658006EAF0B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B8A24E41658006EAF0B /* APIService.swift */; };
 		9FC70B8D24E4171F006EAF0B /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B8C24E4171F006EAF0B /* APIServiceError.swift */; };
+		9FC70B8F24E41AF5006EAF0B /* IndexArticleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B8E24E41AF5006EAF0B /* IndexArticleRequest.swift */; };
+		9FC70B9124E41BF3006EAF0B /* IndexArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC70B9024E41BF3006EAF0B /* IndexArticleResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		9FC70B4924E406B1006EAF0B /* RealWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC70B4C24E406B1006EAF0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FC70B4E24E406B1006EAF0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9FC70B5024E406B1006EAF0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9FC70B5224E406B4006EAF0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FC70B5524E406B4006EAF0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FC70B5824E406B4006EAF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +63,8 @@
 		9FC70B8724E412F9006EAF0B /* ArticleListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListRow.swift; sourceTree = "<group>"; };
 		9FC70B8A24E41658006EAF0B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		9FC70B8C24E4171F006EAF0B /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
+		9FC70B8E24E41AF5006EAF0B /* IndexArticleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexArticleRequest.swift; sourceTree = "<group>"; };
+		9FC70B9024E41BF3006EAF0B /* IndexArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexArticleResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +117,10 @@
 			children = (
 				9FC70B8924E4163E006EAF0B /* Services */,
 				9FC70B8224E41184006EAF0B /* Models */,
-				9FC70B7F24E408C4006EAF0B /* ViewModels */,
 				9FC70B7C24E40860006EAF0B /* Views */,
+				9FC70B7F24E408C4006EAF0B /* ViewModels */,
 				9FC70B4C24E406B1006EAF0B /* AppDelegate.swift */,
 				9FC70B4E24E406B1006EAF0B /* SceneDelegate.swift */,
-				9FC70B5024E406B1006EAF0B /* ContentView.swift */,
 				9FC70B5224E406B4006EAF0B /* Assets.xcassets */,
 				9FC70B5724E406B4006EAF0B /* LaunchScreen.storyboard */,
 				9FC70B5A24E406B4006EAF0B /* Info.plist */,
@@ -176,6 +177,7 @@
 			children = (
 				9FC70B8324E41192006EAF0B /* Article.swift */,
 				9FC70B8524E412A0006EAF0B /* User.swift */,
+				9FC70B9024E41BF3006EAF0B /* IndexArticleResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +187,7 @@
 			children = (
 				9FC70B8A24E41658006EAF0B /* APIService.swift */,
 				9FC70B8C24E4171F006EAF0B /* APIServiceError.swift */,
+				9FC70B8E24E41AF5006EAF0B /* IndexArticleRequest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -320,13 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FC70B9124E41BF3006EAF0B /* IndexArticleResponse.swift in Sources */,
 				9FC70B7E24E40870006EAF0B /* ArticleIndexView.swift in Sources */,
 				9FC70B8D24E4171F006EAF0B /* APIServiceError.swift in Sources */,
 				9FC70B4D24E406B1006EAF0B /* AppDelegate.swift in Sources */,
 				9FC70B8424E41192006EAF0B /* Article.swift in Sources */,
 				9FC70B8124E408D9006EAF0B /* ArticleIndexViewModel.swift in Sources */,
 				9FC70B4F24E406B1006EAF0B /* SceneDelegate.swift in Sources */,
-				9FC70B5124E406B1006EAF0B /* ContentView.swift in Sources */,
+				9FC70B8F24E41AF5006EAF0B /* IndexArticleRequest.swift in Sources */,
 				9FC70B8624E412A0006EAF0B /* User.swift in Sources */,
 				9FC70B8B24E41658006EAF0B /* APIService.swift in Sources */,
 				9FC70B8824E412F9006EAF0B /* ArticleListRow.swift in Sources */,
