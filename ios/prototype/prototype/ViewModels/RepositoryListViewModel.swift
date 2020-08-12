@@ -31,19 +31,12 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
     
     private let responseSubject = PassthroughSubject<SearchRepositoryResponse, Never>()
     private let errorSubject = PassthroughSubject<APIServiceError, Never>()
-    private let trackingSubject = PassthroughSubject<TrackEventType, Never>()
     
     private let apiService: APIServiceType
-    private let trackerService: TrackerType
-    private let experimentService: ExperimentServiceType
     
-    init(apiService: APIServiceType = APIService(),
-         trackerService: TrackerType = TrackerService(),
-         experimentService: ExperimentServiceType = ExperimentService()) {
+    init(apiService: APIServiceType = APIService()) {
         self.apiService = apiService
-        self.trackerService = trackerService
-        self.experimentService = experimentService
-        
+
         bindInputs()
         bindOutputs()
     }
@@ -62,18 +55,7 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
             .share()
             .subscribe(responseSubject)
         
-        let trackingSubjectStream = trackingSubject
-            .sink(receiveValue: trackerService.log)
-        
-        let trackingStream = onAppearSubject
-            .map({.listView})
-            .subscribe(trackingSubject)
-        
-        cancellables += [
-            responseStream,
-            trackingSubjectStream,
-            trackingStream,
-        ]
+        cancellables += [responseStream]
     }
     
     private func bindOutputs() {
@@ -94,17 +76,10 @@ final class RepositoryListViewModel: ObservableObject, UnidirectionalDataFlowTyp
             .map({_ in true})
             .assign(to: \.isErrorShown, on: self)
         
-        let showIconStream = onAppearSubject
-            .map({ [experimentService] _ in
-                experimentService.experiment(for: .showIcon)
-            })
-            .assign(to: \.shouldShowIcon, on: self)
-        
         cancellables += [
             repositoriesStream,
             errorStream,
             errorMessageStream,
-            showIconStream,
         ]
     }
 }
