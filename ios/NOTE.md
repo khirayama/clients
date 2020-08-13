@@ -28,7 +28,7 @@
       - SwiftUIの場合、UIに対して、onTapGestureなどで付与
       - [SwiftUI 実践 tips 集 - Qiita](https://qiita.com/AkkeyLab/items/1a1cf1409807b42b4938)
     - 画面遷移
-      - [【SwiftUI】SwiftUIにおける基本的な画面遷移について - It’s now or never](https://inon29.hateblo.jp/entry/2020/03/28/175807)
+      - [【SwiftUI】SwiftUIにおける基本的な画面遷移について - It's now or never](https://inon29.hateblo.jp/entry/2020/03/28/175807)
       - Sheet
       - Alert
     - HTTP / JSON
