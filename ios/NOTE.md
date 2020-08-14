@@ -1,4 +1,5 @@
 - 言語を学ぶ
+  - [A Swift Tour — The Swift Programming Language (Swift 5.3)](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-ID1)
   - 変数定義
   - 配列
   - 連想配列
